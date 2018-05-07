@@ -74,7 +74,7 @@ class ConverterViewController: UIViewController {
             var addition: String
             addition = "+"
             
-            String(addition) + String(numberOnScreen!)
+          //  String(addition) + String(numberOnScreen!)
             additionPressed = false
             
             
@@ -82,7 +82,7 @@ class ConverterViewController: UIViewController {
             var subtraction: String
             subtraction = "-"
             
-            String(subtraction) + String(numberOnScreen!)
+           // String(subtraction) + String(numberOnScreen!)
             additionPressed = true
             
         }
@@ -146,12 +146,15 @@ class ConverterViewController: UIViewController {
     }
     func fToC(numberOnScreen:Double) -> Double {
         var celcius:Double
+        celcius = (numberOnScreen - 32.0) * 0.556
+        /*
         if buttonPressed == true{
             celcius = (numberOnScreen - 32.0) * 0.556
         } else {
             celcius = (-numberOnScreen - 32.0) * 0.556
             
         }
+ */
         
         return celcius
         
@@ -160,37 +163,40 @@ class ConverterViewController: UIViewController {
         var fahrenheit:Double
         fahrenheit = numberOnScreen * 1.8 + 32
         
-    
+    /*
         if buttonPressed == true{
             fahrenheit = numberOnScreen * 1.8 + 32
         } else {
-            fahrenheit = (-numberOnScreen - 32.0) * 0.556
+             fahrenheit = -numberOnScreen * 1.8 + 32
             
         }
+ */
         return fahrenheit
     }
     func mToK(numberOnScreen:Double) -> Double {
         var kilo:Double
-        //kilo = numberOnScreen * 1.609344
-        
+        kilo = numberOnScreen * 1.609344
+        /*
         if additionPressed == true{
             kilo = numberOnScreen * 1.609344
         } else {
             kilo = -numberOnScreen * 1.609344
             
         }
+ */
         
         return kilo
     }
     func kToM(numberOnScreen:Double) -> Double {
         var miles:Double
         miles = numberOnScreen / 1.609344
-        
+        /*
         if buttonPressed == true{
-            miles = numberOnScreen * 1.609344
+            miles = numberOnScreen / 1.609344
         } else {
-            miles = -numberOnScreen * 1.609344
+            miles = -numberOnScreen / 1.609344
         }
+ */
          
         
         return miles
